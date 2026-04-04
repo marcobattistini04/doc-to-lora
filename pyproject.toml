@@ -4,7 +4,7 @@ version = "0.0.1"
 authors = [{ name = "Rujikorn Charakorn" }]
 description = ""
 readme = "README.md"
-requires-python = ">= 3.10"
+requires-python = ">= 3.10,<3.13"
 dependencies = [
     "transformers==4.51.3",
     "deepspeed==0.17.1",
