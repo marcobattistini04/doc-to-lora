@@ -1,0 +1,53 @@
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.2.0
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+   Building ctx-to-lora @ file:///workspace
+      Built ctx-to-lora @ file:///workspace
+Installed 1 package in 0.86ms
+[2026-04-04 11:33:02,931] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+df: /root/.triton/autotune: No such file or directory
+[2026-04-04 11:33:04,471] [INFO] [logging.py:107:log_dist] [Rank -1] [TorchCheckpointEngine] Initialized with serialization = False
+0
+NVIDIA GeForce RTX 3090
+lora_config: LoraConfig(task_type='CAUSAL_LM', peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, peft_version=None, base_model_name_or_path='google/gemma-2-2b-it', revision=None, inference_mode=False, r=8, target_modules={'down_proj'}, exclude_modules=None, lora_alpha=45.254833995939045, lora_dropout=0.0, fan_in_fan_out=False, bias='none', use_rslora=False, modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', trainable_token_indices=None, loftq_config={}, eva_config=None, corda_config=None, use_dora=False, alora_invocation_tokens=None, use_qalora=False, qalora_group_size=16, layer_replication=None, runtime_config=LoraRuntimeConfig(ephemeral_gpu_offload=False), lora_bias=False, target_parameters=None, arrow_config=None, ensure_weight_tying=False)
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [07:52<07:52, 472.02s/it]Fetching 2 files: 100%|██████████| 2/2 [07:52<00:00, 236.01s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.31it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.49it/s]
+You are attempting to use Flash Attention 2.0 without specifying a torch dtype. This might lead to unexpected behaviour
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.21it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.29it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.37it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.59it/s]
+Using attention mask for resampler
+Using position ids for resampler
+****************************************************************************************************
+
+Using internalized LoRAs for generation
+
+****************************************************************************************************
+<bos><start_of_turn>user
+Tell me about Sakana AI.<end_of_turn>
+<start_of_turn>model
+Sakana AI is a Japanese artificial intelligence company that focuses on the evolution and collective intelligence of AI. They are developing a series of AI models, including the "Sakana" AI, which is designed to be a platform for building new AI systems. 
+
+Here are some key points about Sakana AI:
+
+* **Focus on evolution and collective intelligence:** They are interested in the idea of AI becoming more intelligent through collaboration and learning from each other, similar to how fish work together.
+* **Developing new AI models:** They are creating new AI models, such as "Sakana" AI, which is designed to be a platform for building new AI systems.
+* **Aiming for democratization of AI:** They believe that their models can be used by individuals and companies to build their own AI systems, making AI more accessible.
+* **Collaboration with multiple companies:** They are collaborating with companies like Mitsubishi UFJ, KDDI, and Mitsui to develop their AI models. 
+* **Focus on scientific research:** They are also conducting scientific research in their AI development. 
+* **Potential for large-scale AI systems:** They are aiming to create a large-scale AI system that can be used for various applications. 
+
+
+Sakana AI is a company with a unique approach to AI development, focusing on the idea of AI becoming more intelligent through collaboration and collective intelligence. They are developing new AI models and collaborating with companies to democratize AI development. 
+<end_of_turn>

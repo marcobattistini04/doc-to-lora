@@ -1,0 +1,69 @@
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.2.0
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+   Building ctx-to-lora @ file:///workspace
+      Built ctx-to-lora @ file:///workspace
+Installed 1 package in 0.86ms
+[2026-04-04 17:42:54,347] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+df: /root/.triton/autotune: No such file or directory
+[2026-04-04 17:42:55,919] [INFO] [logging.py:107:log_dist] [Rank -1] [TorchCheckpointEngine] Initialized with serialization = False
+0
+NVIDIA GeForce RTX 3090
+lora_config: LoraConfig(task_type='CAUSAL_LM', peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, peft_version=None, base_model_name_or_path='google/gemma-2-2b-it', revision=None, inference_mode=False, r=8, target_modules={'down_proj'}, exclude_modules=None, lora_alpha=45.254833995939045, lora_dropout=0.0, fan_in_fan_out=False, bias='none', use_rslora=False, modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', trainable_token_indices=None, loftq_config={}, eva_config=None, corda_config=None, use_dora=False, alora_invocation_tokens=None, use_qalora=False, qalora_group_size=16, layer_replication=None, runtime_config=LoraRuntimeConfig(ephemeral_gpu_offload=False), lora_bias=False, target_parameters=None, arrow_config=None, ensure_weight_tying=False)
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]
+Fetching 2 files:  50%|█████     | 1/2 [07:03<07:03, 423.06s/it]
+Fetching 2 files: 100%|██████████| 2/2 [07:03<00:00, 211.53s/it]
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.24it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.36it/s]
+You are attempting to use Flash Attention 2.0 without specifying a torch dtype. This might lead to unexpected behaviour
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.15it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.20it/s]
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.28it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.42it/s]
+Using attention mask for resampler
+Using position ids for resampler
+****************************************************************************************************
+
+Using internalized LoRAs for generation
+
+****************************************************************************************************
+<bos><start_of_turn>user
+Tell me about Alan Turing.<end_of_turn>
+<start_of_turn>model
+Alan Turing (1912-1954) was a British mathematician and logician who is considered the father of theoretical computer science and artificial intelligence. He made significant contributions to the development of the modern computer, particularly through his work on the Turing machine, a theoretical model of computation. 
+
+Here are some key highlights of his life and work:
+
+**Key Contributions:**
+
+* **The Turing Machine:** Turing developed the concept of the Turing machine, a theoretical model of computation that describes the fundamental operations of a computer. This model, though not a physical machine, provided a formal framework for understanding the limitations and capabilities of computers.
+* **The Universal Machine:** Turing also developed the Universal Machine, a theoretical model of computation that could perform any algorithm or function defined by a Turing machine. This concept was a significant step towards the development of the modern computer.
+* **The Turing Test:** Turing proposed the Turing Test, a test for artificial intelligence that involves a human evaluator interacting with a machine to determine if the machine is indistinguishable from a human. This test is still used today to evaluate the capabilities of AI systems.
+* **The Codebreakers:** During World War II, Turing played a crucial role in breaking the German Enigma code, which was used to encrypt military communications. He and his team at Bletchley Park, England, used code-breaking techniques to decipher the Enigma code, providing the Allies with a significant advantage in the war.
+
+**Life and Legacy:**
+
+* **Early Life and Education:** Turing was born in London in 1912 and excelled in mathematics and logic from a young age. He received a degree in mathematics from King's College, Cambridge, and then pursued a PhD in mathematics at the University of London.
+* **Wartime Contributions:** During World War II, Turing's contributions to codebreaking were crucial, and he was recruited to work at Bletchley Park. He played a key role in breaking the German Enigma code, which was essential for Allied victory.
+* **Death and Legacy:** Turing died by suicide in 1954 at the age of 41. His death was a result of his self-imposed isolation and his work on the Turing Test, which he believed could be used to determine the intelligence of machines. His legacy is marked by his contributions to computer science, artificial intelligence, and his role in breaking the Enigma code during World War II. 
+* **Recognition and Honors:** Turing's contributions to computer science and artificial
+ 
