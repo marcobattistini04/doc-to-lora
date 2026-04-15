@@ -35,12 +35,12 @@ model.eval()
 
 tokenizer = get_tokenizer(model.base_model.name_or_path)
 
-with open("data/sakana_wiki.txt", "r") as f:
+with open("data/gutenburg_sample.txt", "r") as f:
     base_doc = f.read()
 
 base_tokens = tokenizer(base_doc)["input_ids"]
 
-doc_tokens = (base_tokens * 1000)[:TARGET_TOKENS]
+doc_tokens = (base_tokens)[:TARGET_TOKENS]
 
 doc = tokenizer.decode(
     doc_tokens,
@@ -51,7 +51,7 @@ doc = tokenizer.decode(
 print(f"Using {len(doc_tokens)} tokens as input")
 
 # ----------- PROMPT ----------- #
-chat = [{"role": "user", "content": "Tell me about Sakana AI.Write a short answer."}]
+chat = [{"role": "user", "content": "Tell me about this document.Write a short answer."}]
 
 input_ids = tokenizer.apply_chat_template(
     chat,

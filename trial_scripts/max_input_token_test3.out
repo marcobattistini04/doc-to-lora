@@ -1,0 +1,71 @@
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.2.0
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+Testing 2650 tokens
+   Building ctx-to-lora @ file:///workspace
+Downloading torchvision (6.9MiB)
+Downloading torch (731.2MiB)
+Downloading torchaudio (3.2MiB)
+      Built ctx-to-lora @ file:///workspace
+ Downloaded torchaudio
+ Downloaded torchvision
+ Downloaded torch
+Uninstalled 4 packages in 275ms
+Installed 4 packages in 163ms
+[2026-04-15 17:35:17,238] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+df: /root/.triton/autotune: No such file or directory
+[2026-04-15 17:35:18,821] [INFO] [logging.py:107:log_dist] [Rank -1] [TorchCheckpointEngine] Initialized with serialization = False
+lora_config: LoraConfig(peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, base_model_name_or_path='google/gemma-2-2b-it', revision=None, task_type='CAUSAL_LM', inference_mode=False, r=8, target_modules={'down_proj'}, lora_alpha=45.254833995939045, lora_dropout=0.0, fan_in_fan_out=False, bias='none', use_rslora=False, modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', loftq_config={}, use_dora=False, layer_replication=None, runtime_config=LoraRuntimeConfig(ephemeral_gpu_offload=False))
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.33it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.54it/s]
+You are attempting to use Flash Attention 2.0 without specifying a torch dtype. This might lead to unexpected behaviour
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.31it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.49it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.33it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.53it/s]
+Using attention mask for resampler
+Using position ids for resampler
+The input hidden states seems to be silently casted in float32, this might be related to the fact you have upcasted embedding or layer norm layers in float32. We will cast back the input in torch.float16.
+Using 2650 tokens as input
+Internalizing document...
+Generating...
+****************************************************************************************************
+
+Using internalized LoRAs for generation
+
+****************************************************************************************************
+SUCCESS
+Testing 2655 tokens
+   Building ctx-to-lora @ file:///workspace
+      Built ctx-to-lora @ file:///workspace
+Uninstalled 1 package in 0.59ms
+Installed 1 package in 0.65ms
+[2026-04-15 17:35:36,605] [INFO] [real_accelerator.py:254:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-15 17:35:37,255] [INFO] [logging.py:107:log_dist] [Rank -1] [TorchCheckpointEngine] Initialized with serialization = False
+lora_config: LoraConfig(peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, base_model_name_or_path='google/gemma-2-2b-it', revision=None, task_type='CAUSAL_LM', inference_mode=False, r=8, target_modules={'down_proj'}, lora_alpha=45.254833995939045, lora_dropout=0.0, fan_in_fan_out=False, bias='none', use_rslora=False, modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', loftq_config={}, use_dora=False, layer_replication=None, runtime_config=LoraRuntimeConfig(ephemeral_gpu_offload=False))
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.35it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.58it/s]
+You are attempting to use Flash Attention 2.0 without specifying a torch dtype. This might lead to unexpected behaviour
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.30it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.48it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.36it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.59it/s]
+Using attention mask for resampler
+Using position ids for resampler
+The input hidden states seems to be silently casted in float32, this might be related to the fact you have upcasted embedding or layer norm layers in float32. We will cast back the input in torch.float16.
+Using 2655 tokens as input
+Internalizing document...
+Generating...
+****************************************************************************************************
+
+Using internalized LoRAs for generation
+
+****************************************************************************************************
+CUDA OUT OF MEMORY
+OOM at 2655

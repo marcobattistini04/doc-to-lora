@@ -17,7 +17,7 @@ docker run --rm \
     $IMAGE_NAME \
     bash -c '
 
-    TOK=2660
+    TOK=2650
 
     while true
     do
