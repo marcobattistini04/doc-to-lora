@@ -42,8 +42,7 @@ RUN uv pip install https://github.com/Dao-AILab/flash-attention/releases/downloa
 RUN uv pip install flashinfer-python==0.2.2 -i https://flashinfer.ai/whl/cu124/torch2.6
 
 
-RUN python3 -m pip install poetry
-RUN poetry install --no-root
+RUN uv pip install -e .
 
 
 VOLUME ["/workspace/data", "/workspace/trained_d2l"]

@@ -33,7 +33,7 @@ tokenizer = get_tokenizer(model.base_model.name_or_path)
 with open("data/sakana_wiki.txt", "r") as f:
     doc = f.read()
 
-chat = [{"role": "user", "content": "Tell me about Sakana AI."}]
+chat = [{"role": "user", "content": "Tell me about Sakana AI.Write a short answer."}]
 chat_ids = tokenizer.apply_chat_template(
     chat,
     add_special_tokens=False,
